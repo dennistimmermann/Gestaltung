@@ -24,7 +24,7 @@ void draw() {
   pushMatrix();
   rotate(-PI/7*angle);
   shearX(PI/7*angle);
-  scale(1-(0.2y*angle));
+  scale(1-(0.2*angle));
   fill(100, 100);
   shape(pin, -200, -400, 400, 400);
   popMatrix();
