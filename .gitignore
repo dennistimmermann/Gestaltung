@@ -2,4 +2,6 @@
 *.wav
 *.mp3
 *.pde~
+*.class
 output/
+!*.mov
