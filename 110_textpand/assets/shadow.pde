@@ -4,7 +4,7 @@ boolean clicked;
 
 void setup() {
   size(1280,720);
-  pin = loadShape("pin.svg");
+  pin = loadShape("assets/pin.svg");
   pin.disableStyle();
   noStroke();
   clicked = false;
@@ -21,7 +21,7 @@ void draw() {
   }
   pushMatrix();
   translate(width/2,height/2+200);
-  
+
   pushMatrix();
   rotate(-PI/7*angle);
   shearX(PI/7*angle);
@@ -30,7 +30,8 @@ void draw() {
   shape(pin, -200, -400, 400, 400);
   popMatrix();
 
-  fill(#F2EFC4);
+  //fill(#F2EFC4);
+  fill(#A5C65B);
   shape(pin, -200, -400, 400, 400);
 
   fill(0,100);
@@ -42,3 +43,4 @@ void mouseClicked() {
   count = 0;
   clicked = true;
 }
+

@@ -17,9 +17,9 @@ void setup() {
   angle = 0.0;
   cameraZ = (height/2.0) / tan(fov/2.0);
   Ani.init(this);
-
-  bg   = loadImage("bg.png");
-  win  = loadImage("win.png");
+  
+  bg = loadImage("bg.png");
+  win = loadImage("win.png");
   lose = loadImage("lose.png");
   keys = loadImage("keys.png");
 
@@ -61,12 +61,12 @@ void setRot() {
   Ani.to(this, 2, "rotation", angle, Ani.BACK_OUT);
   if(abs(angle) > 0.3) {
     println("you lose");
-    Ani.to(this, 2, "trLose", 255);
+    Ani.to(this, 2, "trLose", 255); 
   }
   if(rightCluster.empty() && leftCluster.empty()) {
-    Ani.to(this, 2, "trWin", 255);
-    println("you win");
-  }
+      Ani.to(this, 2, "trWin", 255);
+      println("you win");
+    }
 }
 
 void bounce(float where) {
@@ -89,14 +89,14 @@ void rebounce() {
 
 void draw() {
   pushMatrix();
-  camera(width/2 + ( (mouseX-width/2) / 40), height/2.5- ( (mouseY) / 10), 330.0, width/2, height/2, 0.0, 0.0, 1.0, 1.0);
+  camera(width/2 + ( (mouseX-width/2) / 40), height/2.5- ( (mouseY) / 10), 330.0, width/2, height/2, 0.0, 0.0, 1.0, 1.0); 
   image(bg,0,0);
   background(220,230*(1-abs(rotation)),220*(1-abs(rotation)), 100);
-
+  
   translate(width/2, height/2+40, -200);
   rotate(rotation);
   translate(off-30, 0);
-
+  
   //ellipse(0,0,20,20);
   pushMatrix();
   translate(0,0,-20);
@@ -128,10 +128,10 @@ void draw() {
     if(!rightCluster.empty() && main.type.equals(rightCluster.peek().type)) {
       bounce(-5);
     }
-
+    
   }
   popMatrix();
-
+  
   tint(255,trLose);
   image(lose,0,0);
   tint(255,trWin);
@@ -148,7 +148,7 @@ void permutate(String head, String tail, ArrayList<String> out) {
       String t = tail + e;
       permutate(h, t, out);
     }
-  }
+  } 
   else {
     //println("ende" + tail);
     out.add(tail);
@@ -216,16 +216,16 @@ class MainCluster extends Cluster {
   void swap(int what) {
     switch(what) {
     case UP:
-      type = "" + type.charAt(1) + type.charAt(0) + type.charAt(2) + type.charAt(3);
+      type = "" + type.charAt(1) + type.charAt(0) + type.charAt(2) + type.charAt(3);      
       break;
     case DOWN:
-      type = "" + type.charAt(0) + type.charAt(1) + type.charAt(3) + type.charAt(2);
+      type = "" + type.charAt(0) + type.charAt(1) + type.charAt(3) + type.charAt(2);      
       break;
     case LEFT:
-      type = "" + type.charAt(2) + type.charAt(1) + type.charAt(0) + type.charAt(3);
+      type = "" + type.charAt(2) + type.charAt(1) + type.charAt(0) + type.charAt(3);      
       break;
     case RIGHT:
-      type = "" + type.charAt(0) + type.charAt(3) + type.charAt(2) + type.charAt(1);
+      type = "" + type.charAt(0) + type.charAt(3) + type.charAt(2) + type.charAt(1);      
       break;
     }
   }
@@ -245,7 +245,7 @@ void drawL() {
   vertex(20,20,0);
   vertex(0,20,0);
   endShape(CLOSE);
-
+  
   beginShape();
   vertex(0,0,20);
   vertex(10,0,20);
@@ -254,42 +254,42 @@ void drawL() {
   vertex(20,20,20);
   vertex(0,20,20);
   endShape(CLOSE);
-
+  
   beginShape();
   vertex(0,0,0);
   vertex(0,20,0);
   vertex(0,20,20);
   vertex(0,0,20);
   endShape(CLOSE);
-
+  
   beginShape();
   vertex(0,20,0);
   vertex(20,20,0);
   vertex(20,20,20);
   vertex(0,20,20);
   endShape(CLOSE);
-
+  
   beginShape();
   vertex(0,0,0);
   vertex(10,0,0);
   vertex(10,0,20);
   vertex(0,0,20);
   endShape(CLOSE);
-
+  
   beginShape();
   vertex(20,20,0);
   vertex(20,10,0);
   vertex(20,10,20);
   vertex(20,20,20);
   endShape(CLOSE);
-
+  
   beginShape();
   vertex(10,10,0);
   vertex(20,10,0);
   vertex(20,10,20);
   vertex(10,10,20);
   endShape(CLOSE);
-
+  
   beginShape();
   vertex(10,0,0);
   vertex(10,10,0);
@@ -297,3 +297,4 @@ void drawL() {
   vertex(10,0,20);
   endShape(CLOSE);
 }
+
