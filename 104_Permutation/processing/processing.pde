@@ -13,7 +13,7 @@ PImage bg, lose, win, keys;
 
 void setup() {
 
-  size(1280, 720, P3D);
+  size(1380, 720, P3D);
   angle = 0.0;
   cameraZ = (height/2.0) / tan(fov/2.0);
   Ani.init(this);
