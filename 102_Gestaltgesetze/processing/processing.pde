@@ -6,7 +6,7 @@ ArrayList<Line> l = new ArrayList<Line>(); //lines moving to the left...
 ArrayList<Line> r = new ArrayList<Line>(); //...and right
 
 void setup(){
-  size(1280,720);
+  size(1280,720, P3D);
   strokeCap(SQUARE);
   strokeWeight(0.2);
 

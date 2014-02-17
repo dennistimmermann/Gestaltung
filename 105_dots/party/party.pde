@@ -1,3 +1,4 @@
+import ddf.minim.*;
 Minim minim;
 
 AudioPlayer player, sirene;
@@ -185,8 +186,14 @@ class Particle {
 void mousePressed() {
   loseShit = true;
   println("oh noes");
-  player.close();
+  //player.close();
   sirene.play();
+}
+
+void keyPressed() {
+  if(key == ' ') {
+    noLoop(); 
+  }
 }
 
 int randd() {

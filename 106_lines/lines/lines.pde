@@ -20,7 +20,7 @@ int r,s,t, cc;
 float shx, roty, rotx, scl, f1, f2, f3;
 
 void setup() {
-  size(1024,720, P3D);
+  size(1280,720, P3D);
   r = 25;
   s = 25;
   t = 15;

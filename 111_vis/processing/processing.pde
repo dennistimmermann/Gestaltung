@@ -85,7 +85,7 @@ void draw() {
         rectMode(CORNER);
         noStroke();
         fill(#628163);
-        rect(90,110,50,50);
+        //rect(90,110,50,50);
 
         textAlign(CENTER);
         textFont(font, 12);
@@ -140,7 +140,7 @@ void draw() {
         rectMode(CORNER);
         noStroke();
         fill(#5c8d9b);
-        rect(90,110,50,50);
+        //rect(90,110,50,50);
 
         textAlign(CENTER);
         textFont(font, 12);
@@ -211,7 +211,7 @@ void draw() {
         rectMode(CORNER);
         noStroke();
         fill(#928e74);
-        rect(90,110,50,50);
+        //rect(90,110,50,50);
 
         textAlign(CENTER);
         textFont(font, 12);
@@ -380,7 +380,7 @@ void draw() {
         rectMode(CORNER);
         noStroke();
         fill(#9dac65);
-        rect(90,110,50,50);
+        //rect(90,110,50,50);
 
         textAlign(CENTER);
         textFont(font, 12);

@@ -13,7 +13,7 @@ PImage bg, lose, win, keys;
 
 void setup() {
 
-  size(1380, 720, P3D);
+  size(1280, 720, P3D);
   angle = 0.0;
   cameraZ = (height/2.0) / tan(fov/2.0);
   Ani.init(this);
@@ -137,7 +137,7 @@ void draw() {
   tint(255,trWin);
   image(win,0,0);
   tint(255,127);
-  image(keys,50,50);
+  //image(keys,50,50);
 }
 
 void permutate(String head, String tail, ArrayList<String> out) {

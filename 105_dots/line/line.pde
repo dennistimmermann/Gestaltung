@@ -15,16 +15,20 @@ void setup() {
   lost = new ArrayList<Particle>();
 
   destination = width/2;
+  
 
   //ps.add(new Particle(30,30));
   //ps.add(new Particle(70,70));
 
   for(int i = 50; i > 0; i--) {
   }
+  
+  noLoop();
 
 }
 
 void draw() {
+  
 
   if(encounter == 0) {
     encounter = frameCount + (int) random(max(1,50-shitLost),max(5,320-shitLost*2)+1);
@@ -171,6 +175,11 @@ class Particle {
 void mousePressed() {
   loseShit = true;
   println("oh noes");
+}
+
+void keyPressed( ) {
+  if(key == ' ')
+    loop();
 }
 
 int randd() {
